@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test-cypress": "env-cmd cypress run --browser chrome --headed"
+    "test-cypress": "synpress run --configFile cypress.config.js --env CYPRESS_DEBUG=true"
   },
   "cypress": {
     "videosFolder": "cypress/videos",

@@ -15,7 +15,7 @@ module.exports = defineConfig({
     env: {
       SECRET_WORDS: process.env.CYPRESS_SECRET_WORDS,
       METAMASK_PASSWORD: process.env.CYPRESS_METAMASK_PASSWORD,
-      NETWORK: process.env.CYPRESS_NETWORK
+      NETWORK: "bsc" // Set to BSC Mainnet
     }
   },
 });
