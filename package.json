@@ -1,0 +1,26 @@
+{
+  "name": "privatepools-frontend-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "synpress.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test-cypress": "env-cmd cypress run --browser chrome --headed"
+  },
+  "cypress": {
+    "videosFolder": "cypress/videos",
+    "screenshotsFolder": "cypress/screenshots",
+    "integrationFolder": "tests",
+    "supportFile": "tests/e2e/support.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@synthetixio/synpress": "^3.7.1",
+    "cypress": "12.7.0",
+    "env-cmd": "^10.1.0"
+  }
+}
