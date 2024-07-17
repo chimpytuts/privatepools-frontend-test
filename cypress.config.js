@@ -3,15 +3,19 @@ const synpressPlugins = require("@synthetixio/synpress/plugins");
 
 module.exports = defineConfig({
   userAgent: "synpress",
-  chromeWebSecurity: true,
+  chromeWebSecurity: false,
   e2e: {
     setupNodeEvents(on, config) {
-      // implement node event listeners here
       synpressPlugins(on, config);
+      return config;
     },
     testIsolation: true,
     baseUrl: "https://privatepools-shared-version.vercel.app/",
     supportFile: "cypress/support/e2e.js",
-    // specPattern: []
+    env: {
+      SECRET_WORDS: process.env.CYPRESS_SECRET_WORDS,
+      METAMASK_PASSWORD: process.env.CYPRESS_METAMASK_PASSWORD,
+      NETWORK: process.env.CYPRESS_NETWORK
+    }
   },
 });

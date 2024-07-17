@@ -1,12 +1,14 @@
-import './commands'
+import './commands';
 import '@synthetixio/synpress/support';
 
-// Alternatively you can use CommonJS syntax:
-// require('./commands')
-const NETWORK_GOERLI = Cypress.env("NETWORK")
-const SECRET_WORDS = Cypress.env("SECRET_WORDS")
-const PASSWORD = Cypress.env("METAMASK_PASSWORD")
+const NETWORK = Cypress.env("NETWORK");
+const SECRET_WORDS = Cypress.env("SECRET_WORDS");
+const PASSWORD = Cypress.env("METAMASK_PASSWORD");
 
 before(() => {
-    cy.setupMetamask(SECRET_WORDS, NETWORK_GOERLI, PASSWORD)
-})
+  cy.task('setupMetamask', { secretWords: SECRET_WORDS, network: NETWORK, password: PASSWORD }).then((result) => {
+    console.log('setupMetamask result:', result);
+  }).catch((error) => {
+    console.error('setupMetamask error:', error);
+  });
+});
