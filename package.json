@@ -19,7 +19,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@synthetixio/synpress": "^3.7.1",
+    "@synthetixio/synpress": "^3.7.3",
     "cypress": "12.7.0",
     "env-cmd": "^10.1.0"
   }
