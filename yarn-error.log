@@ -1,0 +1,60 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\reall\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js
+
+PATH: 
+  Python\Scripts\;Python\;C:\ProgramData\Oracle\Java\javapath;C:\Windows\System32\HWAudioDriverLibs;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;Git\cmd;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Users\reall\Desktop\curl\bin;Git\cmd;C:\Program Files (x86)\HP\Common\HPDestPlgIn\;Erlang OTP\bin;Elixir\bin;C:\Windows\system32\config\systemprofile\.mix\escripts;bin;C:\Program Files\Docker\Docker\resources\bin;D:\Programs\nvm;C:\Program Files\nodejs;Git\cmd;D:\Programs\Git\cmd;D:\Programs\cloc;C:\Users\reall\.cargo\bin;C:\Users\reall\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\reall\AppData\Local\Programs\Python\Python311\;Ruby31-x64\bin;C:\Users\reall\AppData\Local\Microsoft\WindowsApps;Microsoft VS Code\bin;C:\Users\reall\AppData\Local\GitHubDesktop\bin;Microsoft VS Code\bin;Inkscape\bin;C:\Program Files (x86)\HP\Common\HPDestPlgIn\;ffmpeg-2023-04-12-git-1179bb703e-essentials_build\bin\;C:\Users\reall\AppData\Local\Yarn\bin;protobuf\bin;C:\Program Files\OpenSSL-Win64\bin;D:\Programs\nvm;C:\Program Files\nodejs;C:\Users\reall\AppData\Roaming\npm;D:\Programs\Microsoft VS Code\bin;D:\Programs\cloc;C:\Users\reall\AppData\Local\Pandoc\;C:\Users\reall\AppData\Local\Programs\MiKTeX\miktex\bin\x64\;C:\Users\reall\.bun\bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.17.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/viem/-/viem-1.21.4.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (C:\Users\reall\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141517:19)
+      at Object.onceWrapper (node:events:628:28)
+      at ClientRequest.emit (node:events:514:28)
+      at TLSSocket.emitRequestTimeout (node:_http_client:847:9)
+      at Object.onceWrapper (node:events:628:28)
+      at TLSSocket.emit (node:events:526:35)
+      at Socket._onTimeout (node:net:571:8)
+      at listOnTimeout (node:internal/timers:569:17)
+      at process.processTimers (node:internal/timers:512:7)
+
+npm manifest: 
+  {
+    "name": "privatepools-frontend-test",
+    "version": "1.0.0",
+    "description": "",
+    "main": "synpress.config.js",
+    "directories": {
+      "test": "tests"
+    },
+    "scripts": {
+      "test-cypress": "synpress run --configFile cypress.config.js --env CYPRESS_DEBUG=true"
+    },
+    "cypress": {
+      "videosFolder": "cypress/videos",
+      "screenshotsFolder": "cypress/screenshots",
+      "integrationFolder": "tests",
+      "supportFile": "tests/e2e/support.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "@synthetixio/synpress": "^3.7.1",
+      "cypress": "12.7.0",
+      "env-cmd": "^10.1.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
