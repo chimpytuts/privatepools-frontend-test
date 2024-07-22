@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test-cypress": "synpress run --configFile cypress.config.js --env CYPRESS_DEBUG=true"
+    "test-cypress": "synpress run -ne --configFile cypress.config.js --env CYPRESS_DEBUG=true"
   },
   "cypress": {
     "videosFolder": "cypress/videos",

@@ -1,14 +1,15 @@
-import './commands';
-import '@synthetixio/synpress/support';
+import "./commands";
+import "@synthetixio/synpress/support";
 
-const NETWORK = Cypress.env("NETWORK");
-const SECRET_WORDS = Cypress.env("SECRET_WORDS");
-const PASSWORD = Cypress.env("METAMASK_PASSWORD");
 
-// before(() => {
-//   cy.task('setupMetamask', { secretWords: SECRET_WORDS, network: NETWORK, password: PASSWORD }).then((result) => {
-//     console.log('setupMetamask result:', result);
-//   }).catch((error) => {
-//     console.error('setupMetamask error:', error);
-//   });
-// });
+before(() => {
+  cy.addMetamaskNetwork({
+    networkName: Cypress.env("T_NETWORK_NAME"),
+    chainId: Cypress.env("T_CHAIN_ID"),
+    rpcUrl: Cypress.env("T_RPC_URL"),
+    symbol: Cypress.env("T_SYMBOL"),
+  });
+  cy.switchToMetamaskWindow();
+  cy.closeMetamaskTransactionDetailsPopup();
+  cy.switchToCypressWindow();
+});
